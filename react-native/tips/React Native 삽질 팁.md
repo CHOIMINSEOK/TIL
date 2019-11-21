@@ -14,3 +14,5 @@
 2. 근데도 안된다면 : native && rm -rf node_modules && yarn install
 
 
+### Android에서 갑자기 run time error가 뜬다.  metro bundler를 restart하는 것으로는 고쳐지지 않는다. 
+-> 앱을 다시 빌드하면 된다 ㅎㅎ 
