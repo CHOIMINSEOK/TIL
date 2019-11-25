@@ -21,8 +21,8 @@ type TypeofBar = typeof bar; // the type {a: number}
 ```
 
 위와 같은 상황에서 
-1.  let TypeofBar = typeof bar; 에서 typeof는 javascript typeof operator로써 동작하게 된다. 따라서, “object” 가 return 될 것. 
-2. 하지만 type TypeofBar = typeof bar; 이 구분의 경우 transfile 될때 없어지게 되고, typescript type query operator가 static type을 설명하기 위해 동작하게 된다. 그래서 이 경우 {a: number} 를 리턴하게 됨! 
+	1.  let TypeofBar = typeof bar; 에서 typeof는 javascript typeof operator로써 동작하게 된다. 따라서, “object” 가 return 될 것. 
+	2. 하지만 type TypeofBar = typeof bar; 이 구분의 경우 transfile 될때 없어지게 되고, typescript type query operator가 static type을 설명하기 위해 동작하게 된다. 그래서 이 경우 {a: number} 를 리턴하게 됨! 
 
 -> `type`이라는 keyword와 typeof가 함께 쓰일경우  Typescript operator로 동작하면서 독특하게 작동하는것 같다! 
 
@@ -92,6 +92,13 @@ interface SquareConfig {
 }
 …
 
+```
+
+
+**Custom Hooks를 만들면서**
+	- 신기하게도 이런 array를 return할수도 있더라. 
+```typescript
+const useForm = () : [string, boolean, (input: string) => void]
 ```
 
 ## **Reference**
