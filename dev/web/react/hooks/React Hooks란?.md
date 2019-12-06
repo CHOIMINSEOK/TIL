@@ -33,6 +33,8 @@ function useRepos(id) {
 				setLoading(false)
 			})
 	}, [id])
+
+	return [ loading, repos ]
 }
 
 // View
