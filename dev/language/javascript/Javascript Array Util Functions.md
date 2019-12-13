@@ -45,3 +45,30 @@ var bbb = JSON.parse(JSON.stringify(aaa));
 ```
 
 [JavaScript 레퍼런스 참조없는 배열 복사(Deep Copy) | 감성 프로그래밍](https://programmingsummaries.tistory.com/143)
+
+
+4. String copy in Javascript
+
+Javascript에서는 기본적으로 String을 Reference로 처리한다. String 기반의 많은 메서드들 역시 reference 기반으로 동작하게 되는데, 이때 deep copy를 하게하는 꿀같은 팁이 있었다. 
+
+```javascript
+var string_copy = (‘ ‘ + original_string).slice(1);
+```
+
+ [How to force JavaScript to deep copy a string?](https://stackoverflow.com/a/31733628/12330603) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
