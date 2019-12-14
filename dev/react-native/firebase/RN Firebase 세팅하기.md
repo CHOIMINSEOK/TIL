@@ -1,5 +1,5 @@
 # RN Firebase 세팅하기
-#dev/react-native/firebase
+#TIL/dev/react-native/firebase
 
  [https://invertase.io/oss/react-native-firebase/](https://invertase.io/oss/react-native-firebase/) 
 
@@ -24,6 +24,9 @@ buildscript {
 // bottom of android/app/build.gradle 
 apply plugin: ‘com.google.gms.google-services’
 ```
+
+> Firebase’s verification that your Android application connects to Firebase requires the Analytics module to be installed in your project. This verification is not necessary. You can click "Skip this step" to finish adding your project and return to the Firebase console.  
+이거 안드로이드는 Firebase Server에 연결이 잘 안되는데, 실제로 react-native-firebase에 보면 이거 신경안써도 된다는 말이 있었다. 정말 그런진 모르겠으나, 필요할때 다시 보면 될 것 같다. 어차피 Firebase Setting을 이 Library를 이용하여 하게 될 것 같아서. 
 
 4. firebase console에서 GoogleService-Info.plist 다운받아서 Xcode 프로젝트 루트에 추가하기 
 문서 참고하기!

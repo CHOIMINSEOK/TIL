@@ -81,6 +81,8 @@ const MyReact = (function() {
 -> Rules of Hooks : Only Call Hooks at the Top Level
 이 Rurle이 나온 이유는 `currentHook`  variable을 잘 살펴보면 알 수 있다. 
 
+이해했다. React가 DOM을 렌더링하는 방식에 굉장히 의존적인 친구인 듯하나, 아무튼, useEffect도 Closure 내부의 dependency array를 가리키는 Array index라는 녀석을 갖고있고, 그친구를 통해 호출될때마다 이전값들을 들고 올 수 있으며, 값비교를 통해 전달받은 콜백을 실행할지 말지를 결정하는 것이다! 
+
 
 
 Reference
