@@ -7,7 +7,7 @@
 
 **onEndReachedThreshold:** is basically a number which indicates the user's scroll position in relation to how far it is from the end of the visible content, when the user reaches the specified position, the onEndReached callback is triggered.
 
-
+-> 이때 추가로 불러들 데이터들을 이전 데이터에 concat하여 다시 `data` props로 전달해주면 된다! 
 
 
 친절한 레퍼런스 

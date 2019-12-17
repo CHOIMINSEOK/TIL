@@ -36,5 +36,10 @@ Object.assign({}, obj);
 ```
 
 
+5. eslint가 훨씬 간단한 팁을 줬다. 그냥 Object Destructuring을 하면된다. 
+```typescript
+{ … obj }
+```
+
 꽤 잘 정리해둔 글.
 [자바스크립트 객체 복사하기](https://velog.io/@ddalpange/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%EA%B0%9D%EC%B2%B4-%EB%B3%B5%EC%82%AC%ED%95%98%EA%B8%B0)
