@@ -30,13 +30,17 @@ Object.keys(dailyRecordsMap).forEach((key) => {
 ```
 
 
-4. Object.assign()을 활용하면 더 간단하게 할 수 있었다. 
+- - - -
+
+**객체복사하는방법!**
+
+1. Object.assign()을 활용하면 더 간단하게 할 수 있었다. 
 ```typescript
 Object.assign({}, obj);
 ```
 
 
-5. eslint가 훨씬 간단한 팁을 줬다. 그냥 Object Destructuring을 하면된다. 
+2. eslint가 훨씬 간단한 팁을 줬다. 그냥 Object Destructuring을 하면된다. 
 ```typescript
 { … obj }
 ```
