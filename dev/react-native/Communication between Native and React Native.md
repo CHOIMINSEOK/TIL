@@ -38,4 +38,9 @@ resolvedImage에는 Image의 url이 들어있는데, Native Module은 이 url로
 
  [How to send images from react native to native modules?](https://stackoverflow.com/questions/50880508/how-to-send-images-from-react-native-to-native-modules) 
 
+`Image.resolveAssetSource()`를 써서 Native Module에 넘기는게 핵심인데, 이와 관련된 Document를 공식문서에서 확인할 수 있다! 
+[Image · React Native](https://facebook.github.io/react-native/docs/image.html#resolveassetsource)
 
+
+4. 읽어볼만한 레퍼런스인 듯.
+[React Native - 브릿지(Bridge)를 이용해 Android에서 Native Module 이용하기 | Leon](https://chaewonkong.github.io/posts/react-native-android-bridge.html)

@@ -11,11 +11,17 @@
 [What is a Symlink?](https://devdojo.com/tutorials/what-is-a-symlink)
 
 - - - -
+0. watching하고 있는 source code에 대해서 변경사항을 자동으로 업데이트해준다. 의존하고있는 다른 컴포넌트의 변경사항을 자동으로 업데이트하고 싶을때, 유용하다. 
 
 1. react-native에서 정확히 무엇을 위해 symlink를 사용하는지는 모르겠다. 왠지 core에서 build된 dist 파일을 native에 연결해주는 용도인 듯. 
 -> 마인딩 RN 프로젝트 초기에 Core와 Native를 다른 패키지로 분리하여 작업할때 core의 컴파일된 코드를 native에 연결해주기 위해 사용했었음. 
+
 
 2. 근데, react native에서는 symlink가 잘 동작하지 않는다고 한다. 그래서 wix가 만든 wml을 사용하여 대체해보려고 했다. 
 [GitHub - wix/wml: An alternative to symlinks that actually copies changed files from source to destination folders](https://github.com/wix/wml)
 
 3. symlink보다 잘 동작했는지는 모르겠지만,, 결론적으로  말하면 뭔가 계속 안되고 core와 native의 sync를 맞추는데 오버헤드가 지속적으로 들어가서 그냥 wml도 안쓰고 core와 native를 통합하는 작업을 해버렸다. 
+
+
+4. wml을 쓰던 중 `directory X is not watched`라는 에러가 뜬다면: watchman watch-del-all를 해주자!
+[error… directory X is not watched · Issue #1 · wix/wml · GitHub](https://github.com/wix/wml/issues/1)
