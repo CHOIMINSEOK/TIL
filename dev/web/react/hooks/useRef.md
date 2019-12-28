@@ -1,0 +1,106 @@
+# useRef
+#TIL/dev/web/react
+
+useRef는 크게 두 가지 형태로 사용된다. 
+
+1. Accessing the DOM nodes or React Element.
+```typescript
+import React, { Component, createRef } from "react";
+
+// class component
+class CustomTextInput extends Component {
+  textInput = createRef();
+
+  focusTextInput = () => this.textInput.current.focus();
+
+  render() {
+    return (
+      <>
+        <input type="text" ref={this.textInput} />
+        <button onClick={this.focusTextInput}>Focus the text input</button>
+      </>
+    );
+  }
+}
+
+// in functional components
+const CustomTextInput = () => {
+  const textInput = useRef();
+
+  focusTextInput = () => textInput.current.focus();
+
+  return (
+    <>
+      <input type="text" ref={textInput} />
+      <button onClick={focusTextInput}>Focus the text input</button>
+    </>
+  );
+}
+```
+
+2. Keeping a mutable variable
+**in class component**
+	- in the component state
+	- in an instance variable
+
+**in functional component**
+	- in a state variable: `useState`, `useReducer`
+	- in a ref: class component에서의 instance variable과 같다. `.current`를 mutate 시키는 것은 re-render를 트리거하지 않는다. 
+
+
+- - - -
+
+**useRef를 렌더링할때 세팅하지말라.**
+> ⇒ “Unless you’re doing lazy initialization, avoid setting refs during rendering — this can lead to surprising behavior. Instead, typically you want to modify refs in event handlers and effects.”  
+> ⇒ All side effects should be done in the “Layout phase” or in the “Commit phase”. In terms of React Hooks, inside the useLayoutEffect or the useEffect.  
+
+```typescript
+import React, { useRef } from "react";
+
+// bad
+const RenderCounter = () => {
+  const counter = useRef(0);
+  
+  // Since the ref value is updated in the render phase,
+  // the value can be incremented more than once
+  counter.current = counter.current + 1;
+  
+  return (
+    <h1>{`The component has been re-rendered ${counter} times`}</h1>
+  );
+};
+
+// good
+const RenderCounter = () => {
+  const counter = useRef(0);
+  
+  useEffect(() => {
+    // Every time the component has been re-rendered,
+    // the counter is incremented
+    counter.current = counter.current + 1;
+  }); 
+  
+  return (
+    <h1>{`The component has been re-rendered ${counter} times`}</h1>
+  );
+};
+```
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
