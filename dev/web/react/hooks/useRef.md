@@ -1,5 +1,5 @@
 # useRef
-#TIL/dev/web/react
+#TIL/dev/web/react/Hooks
 
 useRef는 크게 두 가지 형태로 사용된다. 
 
@@ -88,11 +88,11 @@ const RenderCounter = () => {
 
 
  
+3. Functional Component는 instance를 생성하지않기 때문에 ref를 잡을 수 없다. 
+단, 방법이 있긴한데, useImperativeHandle을 쓰는 것. 근데 Docs에서 imperative code는 거의 대부분의 상황에서 비추천한다고 대놓고 나와있어서 그냥 안쓰는게 좋을듯. 
 
-
-
-
-
+ [Refs and the DOM - React](https://reactjs.org/docs/refs-and-the-dom.html#accessing-refs) 
+ [React hooks and functional component ref](https://stackoverflow.com/a/58412304/12330603) 
 
 
 
