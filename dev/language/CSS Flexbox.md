@@ -1,5 +1,5 @@
 # CSS Flexbox
-#dev/language/CSS
+#TIL/dev/language/CSS
 
 `justify-centent` : 진행 축 정렬과 간격을 제어 / container에 적용 
 	- row면 x축 방향
@@ -22,6 +22,11 @@
 
 - - - -
 근데 Component에 직접 flex값을 줘서 크기를 조절하려고 했었는데 잘 안되더라. 이것저것 삽질하다가, 이러한 레이아웃 조정은 Wrapper Component를 활용하는게 좋다는 것을 깨달았다. Layout 차원에서 입히는  Style은 왠만하면 Wrapper Component를 만들어서 처리할 것. 
+
+
+
+** FlexBox에서 오른 정렬하고 싶은 경우
+-> `flex-end` 속성을 알아보면 된다. 
 
 
 [CSS flexible 레이아웃: flex item의 정렬과 간격. | article](https://naradesign.github.io/article/flex-justify-align.html)
