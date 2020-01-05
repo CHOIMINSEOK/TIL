@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "react-router-dom"
 import styled from "styled-components"
 import { Category } from "./categories"
 import CategoryCard from "./CategoryCard"
@@ -11,7 +12,9 @@ const CategoryGrid: React.FC<ICategoryGridProps> = ({ categories }) => {
   return (
     <Wrapper>
       {categories.map(category => (
-        <CategoryCard category={category} />
+        <Link to={category.to} style={{ textDecoration: "none" }}>
+          <CategoryCard category={category} />
+        </Link>
       ))}
     </Wrapper>
   )
