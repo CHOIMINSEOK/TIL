@@ -20,7 +20,7 @@ const CategoryGrid: React.FC<ICategoryGridProps> = ({ categories }) => {
 const Wrapper = styled.div`
   flex: 1;
   display: flex;
-  width: 1000px;
+  width: 800px;
   justify-content: space-around;
 `
 
