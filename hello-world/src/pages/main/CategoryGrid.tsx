@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { Category } from "./categories"
+import CategoryCard from "./CategoryCard"
 
 export interface ICategoryGridProps {
   categories: Category[]
@@ -10,12 +11,17 @@ const CategoryGrid: React.FC<ICategoryGridProps> = ({ categories }) => {
   return (
     <Wrapper>
       {categories.map(category => (
-        <div>{category.title}</div>
+        <CategoryCard category={category} />
       ))}
     </Wrapper>
   )
 }
 
-const Wrapper = styled.div``
+const Wrapper = styled.div`
+  flex: 1;
+  display: flex;
+  width: 1000px;
+  justify-content: space-around;
+`
 
 export default CategoryGrid

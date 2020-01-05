@@ -10,7 +10,7 @@ const categories: Category[] = [
   },
   {
     title: "DEV",
-    description: "탁월한 개발자가 되기 위한 학습 기록",
+    description: "개발 학습 기록",
   },
 ]
 
