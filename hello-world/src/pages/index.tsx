@@ -1,5 +1,5 @@
 import React from "react"
-import { HashRouter as Router, Route, Link } from "react-router-dom"
+import { Router, Link } from "@reach/router"
 import Main from "./main/index"
 import DetailPage from "./detail"
 
@@ -10,7 +10,9 @@ export const routes = {
 
 export default () => (
   <Router>
-    <Route exact path="/" component={Main} />
+    <Main path="/" />
+    <DetailPage path="life" label="life" />
+    {/* <Route exact path="/" component={Main} />
     <Route
       path={routes.LIFE}
       render={props => <DetailPage {...props} label="life" />}
@@ -18,6 +20,6 @@ export default () => (
     <Route
       path={routes.DEV}
       render={props => <DetailPage {...props} label="dev" />}
-    />
+    /> */}
   </Router>
 )
