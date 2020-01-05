@@ -1,10 +1,12 @@
 import React from "react"
 import styled from "styled-components"
 
-export interface IDetailPageProps {}
+export interface IDetailPageProps {
+  label: string
+}
 
-const DetailPage: React.FC<IDetailPageProps> = () => {
-  return <Wrapper>title</Wrapper>
+const DetailPage: React.FC<IDetailPageProps> = ({ label }) => {
+  return <Wrapper>{label}</Wrapper>
 }
 
 const Wrapper = styled.div``

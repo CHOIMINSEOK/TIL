@@ -11,7 +11,13 @@ export const routes = {
 export default () => (
   <Router>
     <Route exact path="/" component={Main} />
-    <Route path={routes.LIFE} component={DetailPage} />
-    <Route path={routes.DEV} component={DetailPage} />
+    <Route
+      path={routes.LIFE}
+      render={props => <DetailPage {...props} label="life" />}
+    />
+    <Route
+      path={routes.DEV}
+      render={props => <DetailPage {...props} label="dev" />}
+    />
   </Router>
 )
