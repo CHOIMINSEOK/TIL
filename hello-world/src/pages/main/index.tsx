@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
-import CategoryGrid from "./CategoryGrid"
-import categories from "./categories"
+import CategoryGrid from "../../components/CategoryGrid"
+import categories from "../../categories"
 
 export default () => (
   <Wrapper>

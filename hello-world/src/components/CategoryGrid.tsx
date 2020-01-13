@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
-import { Category } from "./categories"
+import { Category } from "../categories"
 import CategoryCard from "./CategoryCard"
 
 export interface ICategoryGridProps {
@@ -11,11 +11,12 @@ export interface ICategoryGridProps {
 const CategoryGrid: React.FC<ICategoryGridProps> = ({ categories }) => {
   return (
     <Wrapper>
-      {categories.map(category => (
-        <Link to={category.to} style={{ textDecoration: "none" }}>
-          <CategoryCard category={category} />
-        </Link>
-      ))}
+      {!!categories &&
+        categories.map(category => (
+          <Link to={category.to} style={{ textDecoration: "none" }}>
+            <CategoryCard category={category} />
+          </Link>
+        ))}
     </Wrapper>
   )
 }
