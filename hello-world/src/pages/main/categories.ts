@@ -1,10 +1,10 @@
-export type Category = {
+export interface Category {
   title: string
   description: string
   to: string
 }
 
-const categories: Category[] = [
+var categories: Category[] = [
   {
     title: "LIFE",
     description: "삶에 대한 학습 기록",
