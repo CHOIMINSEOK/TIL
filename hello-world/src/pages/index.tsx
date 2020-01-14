@@ -1,6 +1,6 @@
 import React from "react"
 import { Router, Link } from "@reach/router"
-import Main from "./main/index"
+import Main from "./main"
 import DetailPage from "./detail"
 
 export const routes = {
@@ -8,18 +8,4 @@ export const routes = {
   DEV: "/dev",
 }
 
-export default () => (
-  <Router>
-    <Main path="/" />
-    <DetailPage path="life" label="life" />
-    {/* <Route exact path="/" component={Main} />
-    <Route
-      path={routes.LIFE}
-      render={props => <DetailPage {...props} label="life" />}
-    />
-    <Route
-      path={routes.DEV}
-      render={props => <DetailPage {...props} label="dev" />}
-    /> */}
-  </Router>
-)
+export default () => <Main />
