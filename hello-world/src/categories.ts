@@ -8,12 +8,12 @@ var categories: Category[] = [
   {
     title: "LIFE",
     description: "삶에 대한 학습 기록",
-    to: "/detail",
+    to: "/life",
   },
   {
     title: "DEV",
     description: "개발 학습 기록",
-    to: "/detail",
+    to: "/dev",
   },
 ]
 
